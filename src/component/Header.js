@@ -18,7 +18,7 @@ const Header = () => {
   const cartState = useSelector((state) => state?.auth?.getCartProduct);
   const productState = useSelector((state) => state?.product?.product);
   const authState = useSelector((state) => state?.auth);
-  
+
   const [subtotal, setSubtotal] = useState(0);
   const [sideActive, setSideActive] = useState(false);
 
@@ -278,13 +278,13 @@ const Header = () => {
           <div className="header-side-1">
             <div className="header-side-child">
               <div>
-                <Link
+                {/* <Link
                   to="/compare-product"
                   className="d-flex align-items-center gap-15 text-white"
                 >
                   <img src="/images/compare.svg" alt="compare" />
                   <p className="mb-0">Compare Product</p>
-                </Link>
+                </Link> */}
               </div>
               <div>
                 <Link
@@ -318,7 +318,7 @@ const Header = () => {
               </div>
             </div>
           </div>
-          <div>
+          {/* <div>
             <div className="dropdown">
               <button
                 className="btn btn-secondary dropdown-toggle bg-transparent border-0 gap-20 d-flex align-items-center"
@@ -351,7 +351,7 @@ const Header = () => {
                 </li>
               </ul>
             </div>
-          </div>
+          </div> */}
 
           <div className="menu-links-parent">
             <div className="menu-links-2">
@@ -361,9 +361,12 @@ const Header = () => {
               <NavLink className="link-text" to="/product">
                 Our Store
               </NavLink>
-              <NavLink className="link-text" to="/blog">
-                Blog
+              <NavLink className="link-text" to="/my-order">
+                My Order
               </NavLink>
+              {/* <NavLink className="link-text" to="/blog">
+                Blog
+              </NavLink> */}
               <NavLink className="link-text" to="/contact">
                 Contact
               </NavLink>

@@ -25,7 +25,7 @@ const SpecialProduct = (props) => {
               src={
                 imgUrl && imgUrl.length > 0
                   ? imgUrl[0].url
-                  : "/images/watch.jpg"
+                  : "/images/81gAcVnUt8L._AC_SX569_.jpg"
               }
               className="img-fluid mx-auto hoverable"
               alt="watch"

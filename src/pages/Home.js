@@ -224,7 +224,7 @@ const Home = () => {
                               src={
                                 item?.images && item.images.length > 0
                                   ? item.images[0].url
-                                  : "/images/watch.jpg"
+                                  : "/images/61ajk8bhu8l_ac_ux385_158-4783.jpg"
                               }
                               className="img-fluid mx-auto hoverable"
                               alt="watch"
@@ -233,7 +233,7 @@ const Home = () => {
                               src={
                                 item?.images && item.images.length > 0
                                   ? item.images[0].url
-                                  : "/images/watch.jpg"
+                                  : "/images/61ajk8bhu8l_ac_ux385_158-4783.jpg"
                               }
                               className="img-fluid mx-auto hoverable"
                               alt="watch-02"
@@ -367,30 +367,29 @@ const Home = () => {
               <h3 className="blog-heading">Special products</h3>
             </div>
           </div>
-          <div className="row ">
-            <div className="special-card-container">
-              {Array.isArray(productState) &&
-                productState?.map((item, index) => {
-                  if (item.tags === "special") {
-                    return (
-                      <div className="special-card-container">
-                        <SpecialProduct
-                          key={index}
-                          id={item?._id}
-                          title={item?.title}
-                          brand={item?.brands}
-                          totalrating={item?.totalrating.toString()}
-                          price={item?.price}
-                          sold={item?.sold}
-                          quantity={item?.quantity}
-                          reedim={item?.reedim}
-                          imgUrl={item?.images}
-                        />
-                      </div>
-                    );
-                  }
-                })}
-            </div>
+
+          <div className="special-card-container">
+            {Array.isArray(productState) &&
+              productState?.map((item, index) => {
+                if (item.tags === "special") {
+                  return (
+                    <div className="special-card-container">
+                      <SpecialProduct
+                        key={index}
+                        id={item?._id}
+                        title={item?.title}
+                        brand={item?.brands}
+                        totalrating={item?.totalrating.toString()}
+                        price={item?.price}
+                        sold={item?.sold}
+                        quantity={item?.quantity}
+                        reedim={item?.reedim}
+                        imgUrl={item?.images}
+                      />
+                    </div>
+                  );
+                }
+              })}
           </div>
         </Container>
 
@@ -429,7 +428,7 @@ const Home = () => {
                               src={
                                 item?.images && item.images.length > 0
                                   ? item.images[0].url
-                                  : "/images/watch.jpg"
+                                  : "/images/polo-de-estilo-informal-para-hombre-camisa-de-manga-con-solapa-transpirable-de-algod-n-a_7825f098-d640-4a01-8748-e3864dea40e0_2000x20004123-2887.jpg"
                               }
                               className="img-fluid mx-auto hoverable"
                               alt="watch"
@@ -438,7 +437,7 @@ const Home = () => {
                               src={
                                 item?.images && item.images.length > 0
                                   ? item.images[0].url
-                                  : "/images/watch.jpg"
+                                  : "/images/polo-de-estilo-informal-para-hombre-camisa-de-manga-con-solapa-transpirable-de-algod-n-a_7825f098-d640-4a01-8748-e3864dea40e0_2000x20004123-2887.jpg"
                               }
                               className="mx-auto hoverable"
                               alt="watch-02"
@@ -598,15 +597,11 @@ const HomeContainer = styled.div`
     gap: 15px;
   }
   .special-card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
     gap: 15px;
   }
-  /* .item-text {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  } */
   @media (max-width: 1000px) {
     .hero-container {
       grid-template-columns: repeat(1, 1fr);
@@ -619,11 +614,11 @@ const HomeContainer = styled.div`
     .blog-card-container {
       grid-template-columns: repeat(2, 1fr);
     }
-    .famous-card-container {
+    .famous-card-container,
+    .popular-cart-container {
+      display: grid;
       grid-template-columns: repeat(2, 1fr);
-    }
-    .special-card-container {
-      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
     }
   }
 
@@ -634,11 +629,11 @@ const HomeContainer = styled.div`
       grid-template-columns: repeat(1, 1fr);
       justify-content: center;
     }
-    .famous-card-container {
+    .famous-card-container,
+    .popular-cart-container {
+      display: grid;
       grid-template-columns: repeat(1, 1fr);
-    }
-    .special-card-container {
-      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
     }
     .main-banner-content h5 {
       font-size: 25px;
