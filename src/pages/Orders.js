@@ -34,12 +34,12 @@ const columns = [
   {
     title: "Status",
     dataIndex: "status",
-  }
+  },
 ];
 
 const Order = () => {
   const dispatch = useDispatch();
-  const orderState = useSelector(state=> state?.auth?.getorderedProduct);
+  const orderState = useSelector((state) => state?.auth?.getorderedProduct);
 
   useEffect(() => {
     dispatch(getUserOrders());
@@ -51,9 +51,11 @@ const Order = () => {
       key: i + 1,
       orderid: orderState[i]?._id,
       producttitle: orderState[i]?.orderItems[i]?.product?.title,
-      totalamount: orderState[i]?.orderItems[i]?.price,
-      totalreedimearned: orderState[i]?.orderItems[i]?.product?.reedim * (i + 1),
-      totalamountafterdiscount: orderState[i]?.orderItems[i]?.price - orderState[i]?.orderItems[i]?.product?.reedim * (i + 1),
+      totalamount: orderState[i]?.totalPrice,
+      totalreedimearned: orderState[i]?.orderItems[i]?.product?.reedim,
+      totalamountafterdiscount:
+        orderState[i]?.totalPrice -
+        orderState[i]?.orderItems[i]?.product?.reedim,
       status: orderState[i]?.status,
     });
   }
