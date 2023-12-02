@@ -45,7 +45,7 @@ const ProductCart = (props) => {
                   src={
                     item?.images && item.images.length > 0
                       ? item.images[0].url
-                      : "/images/watch.jpg"
+                      : "/images/81gAcVnUt8L._AC_SX569_.jpg"
                   }
                   className="img-fluid mx-auto hoverable"
                   alt="watch"
@@ -54,7 +54,7 @@ const ProductCart = (props) => {
                   src={
                     item?.images && item.images.length > 0
                       ? item.images[0].url
-                      : "/images/watch.jpg"
+                      : "/images/81gAcVnUt8L._AC_SX569_.jpg"
                   }
                   className="img-fluid mx-auto hoverable"
                   alt="watch-02"

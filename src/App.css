@@ -6,8 +6,8 @@
 
 :root {
   --color-primary: #11364d;
-  --color-primary-2: #B76E79;
-  --color-primary-3:#008080;
+  --color-primary-2: #b76e79;
+  --color-primary-3: #008080;
   --color-primary-4: #29120065;
   --color-primary-5: #6d226da9;
   --color-primary-6: #dbdbdb99;
@@ -25,7 +25,7 @@ ul {
 li {
   list-style: none;
 }
-p{
+p {
   margin-bottom: 0 !important;
 }
 .form-control {
@@ -89,7 +89,7 @@ p{
   width: 35px;
 }
 .header-bottom {
-  background-color: var(--color-primary-4);
+  background-color: #8b008b;
 }
 .link-text,
 .dropdown button {
@@ -101,7 +101,7 @@ p{
   text-transform: uppercase;
 }
 .link-text:hover {
-  color: var(--color-primary-2) !important;
+  color: var(--color-primary-6) !important;
 }
 .header-bottom .dropdown button:focus {
   box-shadow: none !important;
@@ -140,8 +140,8 @@ footer:not(:first-child) {
   color: white;
   padding: 8px 17px;
 }
-@media (max-width:1000px) {
-  .footer-top-data{
+@media (max-width: 1000px) {
+  .footer-top-data {
     flex-direction: column !important;
     gap: 10px !important;
   }
@@ -947,7 +947,7 @@ title h4 {
   font-weight: 400;
   color: var(--color-primary-4);
 }
-.error{
+.error {
   color: red !important;
   font-size: 14px !important;
 }

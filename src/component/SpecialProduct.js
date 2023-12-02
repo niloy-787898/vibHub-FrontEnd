@@ -14,7 +14,7 @@ const SpecialProduct = (props) => {
     imgUrl,
   } = props;
   return (
-    <div className="">
+    <div className="" style={{maxWidth:"400px"}}>
       <Link className="special-product-cart position-relative" to={"/product/" + id}>
         <div className="d-flex  align-items-center gap-4">
           <div
