@@ -171,7 +171,7 @@ const Header = () => {
                     ) : (
                       <button
                         className="mb-0 d-flex align-items-center gap-15 text-white px-2"
-                        style={{ background: "#B76E79", borderRadius: "5px" }}
+                        style={{ background: "#1e56a0", borderRadius: "5px", padding: "6px 20px" , border: "none"}}
                         onClick={handleLogout}
                       >
                         Log Out

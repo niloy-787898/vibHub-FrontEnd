@@ -40,6 +40,7 @@ const columns = [
 const Order = () => {
   const dispatch = useDispatch();
   const orderState = useSelector((state) => state?.auth?.getorderedProduct);
+  console.log("response", orderState)
 
   useEffect(() => {
     dispatch(getUserOrders());
@@ -47,17 +48,20 @@ const Order = () => {
 
   const data1 = [];
   for (let i = 0; i < orderState?.length; i++) {
-    data1.push({
-      key: i + 1,
-      orderid: orderState[i]?._id,
-      producttitle: orderState[i]?.orderItems[i]?.product?.title,
-      totalamount: orderState[i]?.totalPrice,
-      totalreedimearned: orderState[i]?.orderItems[i]?.product?.reedim,
-      totalamountafterdiscount:
-        orderState[i]?.totalPrice -
-        orderState[i]?.orderItems[i]?.product?.reedim,
-      status: orderState[i]?.status,
-    });
+    const orderItems = orderState[i]?.orderItems || []; // Ensure orderItems exist
+    for (let j = 0; j < orderItems.length; j++) {
+      const productTitle = orderItems[j]?.product?.title || 'N/A';
+      data1.push({
+        key: data1.length + 1,
+        orderid: orderState[i]?._id,
+        producttitle: productTitle,
+        totalamount: orderState[i]?.totalPrice,
+        totalreedimearned: orderItems[j]?.product?.reedim || 0,
+        totalamountafterdiscount:
+          orderState[i]?.totalPrice - (orderItems[j]?.product?.reedim || 0),
+        status: orderState[i]?.status,
+      });
+    }
   }
 
   return (

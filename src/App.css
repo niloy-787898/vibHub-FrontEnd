@@ -8,7 +8,7 @@
   --color-primary: #11364d;
   --color-primary-2: #b76e79;
   --color-primary-3: #008080;
-  --color-primary-4: #29120065;
+  --color-primary-4: #111827;
   --color-primary-5: #6d226da9;
   --color-primary-6: #dbdbdb99;
 }
@@ -79,7 +79,7 @@ p {
 }
 
 .header-upper {
-  background-color: var(--color-primary-3);
+   background-color: #111827;
 }
 .header-upper .input-group-text {
   background-color: var(--color-primary-4);
@@ -89,7 +89,7 @@ p {
   width: 35px;
 }
 .header-bottom {
-  background-color: #8b008b;
+  background-color: #1e56a0;
 }
 .link-text,
 .dropdown button {

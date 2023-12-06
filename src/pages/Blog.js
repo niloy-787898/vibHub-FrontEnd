@@ -10,18 +10,8 @@ const Blog = () => {
       <BreadCrum title="Blog" />
       <Container class1="blog-wrapper home-wrapper-2 py-5">
         <div className="row">
-          <div className="col-3">
-            <div className="filter-cart mb-3">
-              <h3 className="filter-title">Find By Category</h3>
-              <ul className="ps-0">
-                <li>Watch</li>
-                <li>TV</li>
-                <li>Camera</li>
-                <li>Laptop</li>
-              </ul>
-            </div>
-          </div>
-          <div className="col-9">
+         
+          <div className="col-12">
             <div className="row ">
               <div className="col-6 mb-4">
                 <BlogCart />

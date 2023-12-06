@@ -86,9 +86,9 @@ const Footer = () => {
                   <Link to="/terms-condition" className="text-white py-2 mb-1">
                     Terms & Condition
                   </Link>
-                  {/* <Link to="/blog" className="text-white py-2 mb-1">
+                  <Link to="/blog" className="text-white py-2 mb-1">
                     Blogs
-                  </Link> */}
+                  </Link>
                 </div>
               </div>
               <div>
@@ -116,7 +116,7 @@ const Footer = () => {
             <div className="row">
               <div className="col-12">
                 <p className="text-center mb-0 text-white">
-                  &copy; {new Date().getFullYear()}; Powered By VibHub{" "}
+                  &copy; {new Date().getFullYear()}; Powered By VibeHub{" "}
                 </p>
               </div>
             </div>

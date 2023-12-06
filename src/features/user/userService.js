@@ -56,6 +56,7 @@ const getUserOrders = async () => {
       config
     );
     if (response.data) {
+      console.log("response data",response.data)
       return response.data;
     }
   } catch (error) {
