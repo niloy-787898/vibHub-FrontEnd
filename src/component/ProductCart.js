@@ -29,7 +29,7 @@ const ProductCart = (props) => {
               location.pathname === "/product" ? `gr-${grid}` : "col-3"
             }`}
           >
-            <div className="product-cart position-relative">
+            <div className="product-cart position-relative" style={{ cursor:"pointer"}}>
               <div className="wishlist-icon position-absolute">
                 <button
                   className="bg-transparent border-0"

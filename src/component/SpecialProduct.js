@@ -14,12 +14,12 @@ const SpecialProduct = (props) => {
     imgUrl,
   } = props;
   return (
-    <div className="" style={{maxWidth:"400px"}}>
+    <div className="" style={{maxWidth:"400px", cursor:"pointer"}}>
       <Link className="special-product-cart position-relative" to={"/product/" + id}>
         <div className="d-flex  align-items-center gap-4">
           <div
             className="product-image"
-            style={{ display: "block", maxWidth: "200px", width: "100%" }}
+            style={{ display: "block", maxWidth: "150px", width: "100%" }}
           >
             <img
               src={
@@ -34,7 +34,9 @@ const SpecialProduct = (props) => {
           <div>
             <div className="special-product-content">
               <p className="brand mb-0">{brand}</p>
-              <h6 className="title">{title}</h6>
+              <h6 className="title">{title
+                                  ? `${title.slice(0, 20)}`
+                                  : "this is title"}</h6>
               <ReactStars
                 count={5}
                 value={totalrating}

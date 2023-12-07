@@ -201,7 +201,7 @@ const Home = () => {
                 productState?.map((item, index) => {
                   if (item?.tags === "featured") {
                     return (
-                      <div key={index}>
+                      <div key={index} style={{ cursor:"pointer"}}>
                         <div className="product-cart position-relative">
                           <div className="wishlist-icon position-absolute">
                             <button
@@ -243,8 +243,10 @@ const Home = () => {
                             className="product-details"
                             onClick={() => navigate("/product/" + item?._id)}
                           >
-                            <h6 className="brand"> {item?.brands}</h6>
-                            <h5 className="title">{item?.title}</h5>
+                            <h6 className="brand mt-2"> {item?.brands}</h6>
+                            <h5 className="title">{item?.title
+                                  ? `${item?.title.slice(0, 30)}`
+                                  : "this is title"}</h5>
                             <ReactStars
                               count={5}
                               value={item?.totalrating.toString()}
@@ -405,7 +407,7 @@ const Home = () => {
                 productState?.map((item, index) => {
                   if (item?.tags === "popular") {
                     return (
-                      <div key={index}>
+                      <div key={index} style={{ cursor:"pointer"}}>
                         <div className="product-cart position-relative">
                           <div className="wishlist-icon position-absolute">
                             <button
@@ -448,7 +450,9 @@ const Home = () => {
                             onClick={() => navigate("/product/" + item?._id)}
                           >
                             <h6 className="brand"> {item?.brands}</h6>
-                            <h5 className="title">{item?.title}</h5>
+                            <h5 className="title">{item?.title
+                                  ? `${item?.title.slice(0, 30)}`
+                                  : "this is title"}</h5>
                             <ReactStars
                               count={5}
                               value={item?.totalrating.toString()}

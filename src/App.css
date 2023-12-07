@@ -626,11 +626,11 @@ footer:not(:first-child) {
 .wishlist-cart {
   padding: 20px 15px;
   background-color: white;
-  border-radius: 10px;
+  /* border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  -o-border-radius: 10px; */
 }
 .cross {
   width: 20px;
